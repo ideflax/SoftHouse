@@ -8,16 +8,13 @@ internal class SHAConsoleApp
 {
     private static void Main(string[] args)
     {
-
         FileStream fileStream = File.OpenRead("fileBased.txt");
         StreamReader streamReader = new StreamReader(fileStream);
         People people = new People();
         people.Person = new List<Person>();
         Person? currentPerson = null;
         Family? currentFamily = null;
-
         string line;
-
 
         while ((line = streamReader.ReadLine()) != null)
         {
@@ -100,19 +97,11 @@ internal class SHAConsoleApp
                 }
             }     
         }
-
         XmlSerializer serializer = new XmlSerializer(typeof(People));
         serializer.Serialize(Console.Out, people);
         FileStream fs = File.Create("output.xml");
         serializer.Serialize(fs, people);
         Console.WriteLine();
         Console.ReadLine();
-
-
-
-
-
     }
-
-
 }
