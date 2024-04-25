@@ -32,8 +32,8 @@ internal class SHAConsoleApp
                 {
                     case "P":
                         currentPerson = new Person();
-                        currentPerson.Firstname = row[1];
-                        currentPerson.Lastname = row[2];
+                        currentPerson.Firstname = row.ElementAtOrDefault(1);
+                        currentPerson.Lastname = row.ElementAtOrDefault(2);
                         people.Person.Add(currentPerson);
                         currentFamily = null;       //New person in created, clear if there's a family from previous person
                         break;
