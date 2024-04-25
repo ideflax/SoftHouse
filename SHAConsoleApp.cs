@@ -93,6 +93,10 @@ internal class SHAConsoleApp
                             //No Node to attach Family to, implement error handling.
                         }
                         break;
+
+                    default:
+                        //Check format of input file, implement error handling.
+                        break;
                 }
             }     
         }
